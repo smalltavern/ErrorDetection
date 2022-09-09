@@ -70,6 +70,29 @@ cd 文件目录
 git add 加上自己需要提交的文件名字
 git add . //表示提交所有的文件
 git commit -m '写上自己的提交记录'
-git push //就直接推送到github中
+git push //就直接推送到github
+```
+
+## 二. 多人管理仓库
+
+多人管理的时候，团队成员不适合使用ssh进行代码提交，因为必须将协作者的公钥放在创建者的SSH key中，但是如果团队成员已经有了一个关联的github账号，这种方法行不通，一个账号只能关联一个公钥，接下来就使用http进行项目管理
+
+> 仓库的地址：https://github.com/smalltavern/ErrorDetection.git
+
+```
+git clone https://<your_token>@github.com/<username>/<repo>.git //这里面是添加了token
+```
+
+your_token写上token，这样才能够拉代码
+
+```
+cd repo //进入对应的文件目录
+```
+
+```
+git add 某文件
+git commit -m "提交文件的描述信息"
+git remote add origin <提交到的仓库地址>：记得仓库地址里面要加token
+git push -u origin master
 ```
 
