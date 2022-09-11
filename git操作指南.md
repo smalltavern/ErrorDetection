@@ -92,7 +92,7 @@ cd repo //进入对应的文件目录
 ```
 git add 某文件
 git commit -m "提交文件的描述信息"
-git remote add origin <提交到的仓库地址>：记得仓库地址里面要加token
+git remote add origin <提交到的仓库地址>（记得仓库地址里面要加token，如果已经和远程仓库连接，则不需要)
 git push -u origin master
 ```
 
